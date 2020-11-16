@@ -6,6 +6,11 @@ In this guide you will learn how to get started writing and deploying Terraform 
 
 ## Prerequisites
 
+Example:
+
+- Terraform **version 12.13** or later
+- Docker Desktop **version 2.2** or later
+
 ## Install Terraform
 
 Visit [Terraform.io](https://www.terraform.io/downloads.html) to download the application executable file for your platform, machine or environment on which you like to run code and do development.
@@ -263,3 +268,6 @@ Look for a message at the bottom of the output asking for confirmation before de
 Congratulations! You just took your first steps declaring and provisioning IaC with Terraform.
 
 ## Next Steps
+
+- Try the "Getting Started" Terraform track on [learn.hashicorp.com](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code)
+- Explore the [Terraform Documentation](https://www.terraform.io/docs/index.html)
