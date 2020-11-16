@@ -40,6 +40,9 @@ resource "docker_image" "nginx" {
 }
 ```
 
+In the above example, the docker "provider" is declared to enable the docker_container and docker_image resource types. The docker_container resource accepts arguments like "image", "name" and "port" that declare the resource's desired state. Check out the [Terraform configuration language docs](https://www.terraform.io/docs/configuration/index.html) to learn more about resources and providers.
+```
+
 Initialize Terraform with the `init` command. The AWS provider will automatically be installed. 
 
 ```shell
