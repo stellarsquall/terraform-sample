@@ -2,9 +2,17 @@
 
 Terraform is the most popular language for defining and provisioning Infrastructure as Code (IaC).
 
+In this guide you will learn how to get started writing and deploying Terraform configurations.
+
+## Prerequisites
+
+## Install Terraform
+
 Visit [Terraform.io](https://www.terraform.io/downloads.html) to download the application executable file for your platform, machine or environment on which you like to run code and do development.
 
 After Terraform is installed you can define and create some infrastructure.
+
+## Define the Terraform Module
 
 Most users find it easiest to create a new directory on their local machine and create Terraform configuration code inside it.
 
@@ -12,6 +20,8 @@ Most users find it easiest to create a new directory on their local machine and 
 $ mkdir terraform-demo
 $ cd terraform-demo
 ```
+
+This directory is called a "module", and it contains your Terraform configuration files.
 
 Next, create a file with a `.tf` extension for your Terraform configuration code.
 
@@ -41,7 +51,8 @@ resource "docker_image" "nginx" {
 ```
 
 In the above example, the docker "provider" is declared to enable the docker_container and docker_image resource types. The docker_container resource accepts arguments like "image", "name" and "port" that declare the resource's desired state. Check out the [Terraform configuration language docs](https://www.terraform.io/docs/configuration/index.html) to learn more about resources and providers.
-```
+
+## Deploy the Configuration
 
 Initialize Terraform with the `init` command. The AWS provider will automatically be installed. 
 
@@ -75,7 +86,9 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-Check for any errors in the output. A common mistake is not starting Docker first, which produces the "Is the docker daemon running?" error. Once `init` runs successfully, provision the resource with the `apply` command. Enter `yes` when asked if you would like to perform these actions.
+Check for any errors in the output. A common mistake is not starting Docker first, which produces the "Is the docker daemon running?" error. 
+
+Once `init` runs successfully, provision the resource with the `apply` command. Enter `yes` when asked if you would like to perform these actions.
 
 ```shell
 $ terraform apply
@@ -149,6 +162,8 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
 
 The `apply`command will take up to a few minutes to run and upon success will display a message indicating that the resource was created.
+
+## Cleaning Up
 
 Finally, destroy the infrastructure:
 
@@ -247,3 +262,4 @@ Look for a message at the bottom of the output asking for confirmation before de
 
 Congratulations! You just took your first steps declaring and provisioning IaC with Terraform.
 
+## Next Steps
