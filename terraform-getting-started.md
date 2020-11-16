@@ -4,6 +4,12 @@ Terraform is the most popular language for defining and provisioning Infrastruct
 
 In this guide you will learn how to get started writing and deploying Terraform configurations.
 
+### Learning Objectives:
+
+- Define Terraform resources that deploys a Docker container
+- Run the `init` and `apply` commands to manage infrastructure
+- Clean up the associated resources
+
 ## Prerequisites
 
 Example:
