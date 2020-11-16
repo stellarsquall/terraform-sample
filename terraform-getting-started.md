@@ -2,9 +2,9 @@
 
 Terraform is the most popular language for defining and provisioning Infrastructure as Code (IaC).
 
-To install Terraform, simply visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file for your platform, machine or environment on which you like to run code and do development.
+Visit [Terraform.io](https://www.terraform.io/downloads.html) to download the application executable file for your platform, machine or environment on which you like to run code and do development.
 
-With Terraform installed, let's dive right into it and start creating some infrastructure.
+After Terraform is installed you can define and create some infrastructure.
 
 Most users find it easiest to create a new directory on their local machine and create Terraform configuration code inside it.
 
@@ -46,7 +46,7 @@ Initialize Terraform with the `init` command. The AWS provider will automaticall
 $ terraform init
 ```
 
-You should check for any errors in the output. If `init` ran successfully, provision the resource with the `apply` command.
+Check for any errors in the output. If `init` ran successfully, provision the resource with the `apply` command.
 
 ```shell
 $ terraform apply
