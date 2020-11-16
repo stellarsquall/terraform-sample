@@ -49,7 +49,7 @@ Initialize Terraform with the `init` command. The AWS provider will automaticall
 $ terraform init
 ```
 
-Check for any errors in the output. If `init` ran successfully, provision the resource with the `apply` command.
+Check for any errors in the output. A common mistake is not starting Docker first, which produces the "Is the docker daemon running?" error. Once `init` runs successfully, provision the resource with the `apply` command.
 
 ```shell
 $ terraform apply
