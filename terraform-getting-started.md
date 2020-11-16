@@ -6,8 +6,8 @@ In this guide you will learn how to get started writing and deploying Terraform 
 
 ### Learning Objectives:
 
-- Define Terraform resources that deploys a Docker container
-- Run the `init` and `apply` commands to manage infrastructure
+- Define Terraform resources that deploy a Docker container
+- Run the `init` and `apply` commands to manage infrastructure deployments
 - Clean up the associated resources
 
 ## Prerequisites
@@ -19,7 +19,7 @@ In this guide you will learn how to get started writing and deploying Terraform 
 
 Visit [Terraform.io](https://www.terraform.io/downloads.html) to download the application executable file for your platform, machine or environment on which you like to run code and do development.
 
-After Terraform is installed you can define and create some infrastructure.
+After Terraform is installed you can define and create some infrastructure. In this tutorial you will manage Docker resources on your local machine.
 
 ## Define the Terraform Module
 
@@ -59,11 +59,11 @@ resource "docker_image" "nginx" {
 }
 ```
 
-In the above example, the docker "provider" is declared to enable the docker_container and docker_image resource types. The docker_container resource accepts arguments like "image", "name" and "port" that declare the resource's desired state. Check out the [Terraform configuration language docs](https://www.terraform.io/docs/configuration/index.html) to learn more about resources and providers.
+In the above example, the docker "provider" is declared to enable the `docker_container` and `docker_image` resource types. The `docker_container` resource accepts arguments like *image*, *name* and *port* that declare the resource's desired state. Check out the [Terraform configuration language docs](https://www.terraform.io/docs/configuration/index.html) to learn more about resources and providers.
 
 ## Deploy the Configuration
 
-Initialize Terraform with the `init` command. The AWS provider will automatically be installed. 
+Initialize Terraform with the `init` command. The docker provider will automatically be installed. 
 
 ```shell
 $ terraform init
@@ -170,7 +170,7 @@ docker_container.nginx: Creation complete after 1s [id=a8d2c9a107dde9cd927cd1ed3
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
 
-The `apply`command will take up to a few minutes to run and upon success will display a message indicating that the resource was created.
+The `apply`command will take up to a few minutes to run. The "Apply complete!" message indicates the resource was successfully created.
 
 ## Cleaning Up
 
@@ -267,7 +267,7 @@ docker_container.nginx: Destruction complete after 0s
 docker_image.nginx: Destroying... [id=sha256:f35646e83998b844c3f067e5a2cff84cdf0967627031aeda3042d78996b68d35nginx:latest]
 ```
 
-Look for a message at the bottom of the output asking for confirmation before destroying the associated resources. Type `yes` and hit ENTER and Terraform will destroy the resources it created earlier.
+Look for a message at the bottom of the output asking for confirmation before destroying the associated resources. Type `yes` and hit ENTER, and Terraform will destroy the resources it created earlier.
 
 Congratulations! You just took your first steps declaring and provisioning IaC with Terraform.
 
