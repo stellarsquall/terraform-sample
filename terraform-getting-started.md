@@ -12,10 +12,8 @@ In this guide you will learn how to get started writing and deploying Terraform 
 
 ## Prerequisites
 
-Example:
-
-- Terraform **version 12.13** or later
-- Docker Desktop **version 2.2** or later
+- [Terraform CLI](https://www.terraform.io) **version 12.13** or later
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) for Windows and MacOS or [Docker Linux Engine](https://hub.docker.com/search?q=&type=edition&offering=community&operating_system=linux) for Linux and cloud instances
 
 ## Install Terraform
 
